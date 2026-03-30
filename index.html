@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vivero Digital | Plantas con Propósito</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">🌿 <span>ViveroDigital</span></div>
+</header>
+
+<main>
+    <div class="hero">
+        <h1 style="font-size: 3rem; font-weight: 900; margin: 0;">Lleva la selva a tu casa</h1>
+        <p style="font-size: 1.2rem; opacity: 0.9;">Plantas de interior cuidadas con amor y listas para decorar.</p>
+    </div>
+
+    <h2>🍃 Nuestras Plantas</h2>
+    <div class="plant-grid">
+        <!-- Planta 1 -->
+        <div class="card">
+            <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1614594975525-e45190c55d0b?auto=format&fit=crop&w=600&q=80');">
+                <div class="care-tags">
+                    <span class="tag">☀️ Sombra</span>
+                    <span class="tag">💧 Semanal</span>
+                </div>
+            </div>
+            <div class="card-content">
+                <h3 class="card-title">Monstera Deliciosa</h3>
+                <p class="card-desc">La reina de las plantas de interior por sus hojas gigantes perforadas.</p>
+                <div class="card-footer">
+                    <span class="price">$8.500</span>
+                    <div class="qty-pill">
+                        <button class="qty-btn" onclick="updateQty('p1', -1)">-</button>
+                        <span class="qty-value" id="qty-p1">0</span>
+                        <button class="qty-btn" onclick="updateQty('p1', 1)">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Planta 2 -->
+        <div class="card">
+            <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1597055181300-e3633a207519?auto=format&fit=crop&w=600&q=80');">
+                <div class="care-tags">
+                    <span class="tag">☀️ Sol Directo</span>
+                    <span class="tag">💧 Poco</span>
+                </div>
+            </div>
+            <div class="card-content">
+                <h3 class="card-title">Ficus Lyrata</h3>
+                <p class="card-desc">Elegante y alta, perfecta para rincones iluminados en tu living.</p>
+                <div class="card-footer">
+                    <span class="price">$12.000</span>
+                    <div class="qty-pill">
+                        <button class="qty-btn" onclick="updateQty('p2', -1)">-</button>
+                        <span class="qty-value" id="qty-p2">0</span>
+                        <button class="qty-btn" onclick="updateQty('p2', 1)">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Planta 3 -->
+        <div class="card">
+            <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1599598425947-520265442654?auto=format&fit=crop&w=600&q=80');">
+                <div class="care-tags">
+                    <span class="tag">☀️ Todoterreno</span>
+                    <span class="tag">💧 Quincenal</span>
+                </div>
+            </div>
+            <div class="card-content">
+                <h3 class="card-title">Sansevieria</h3>
+                <p class="card-desc">"Lengua de Suegra". La más resistente del mundo, purifica el aire.</p>
+                <div class="card-footer">
+                    <span class="price">$4.500</span>
+                    <div class="qty-pill">
+                        <button class="qty-btn" onclick="updateQty('p3', -1)">-</button>
+                        <span class="qty-value" id="qty-p3">0</span>
+                        <button class="qty-btn" onclick="updateQty('p3', 1)">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECCIÓN CARRITO -->
+    <div id="cart-section" class="cart-section" style="display: none;">
+        <h3>🛒 Tu Pedido Botánico</h3>
+        <div id="cart-items"></div>
+        <div style="text-align: right; margin-top: 2rem;">
+            <div style="font-size: 1.5rem; font-weight: 800; margin-bottom: 1rem;">Total: $<span id="cart-total">0</span></div>
+            <button onclick="sendOrder()" class="btn-checkout">✅ Confirmar por WhatsApp</button>
+        </div>
+    </div>
+</main>
+
+<script src="js/app.js"></script>
+</body>
+</html>

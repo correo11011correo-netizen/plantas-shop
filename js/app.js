@@ -44,7 +44,7 @@ function renderCart() {
 }
 
 function sendOrder() {
-    const phone = "5491151623621";
+    const phone = "5491124095963";
     let text = "🌿 *Nuevo Pedido de Plantas*\n\n";
     let total = 0;
 
